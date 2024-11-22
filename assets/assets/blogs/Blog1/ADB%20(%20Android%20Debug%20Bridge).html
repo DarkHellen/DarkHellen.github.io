@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: Black; color: #495057;">
+
+<!-- Header Section with Black Background -->
+<header style="background: linear-gradient(to right, #007bff, #6c757d); color: Black; padding: 3em 0; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+        <!-- Logo Section -->
+        <div style="flex: 1; display: flex; align-items: center;">
+            <img src="https://avatars.githubusercontent.com/u/146319020?s=400&u=c8c08a83a1b2049377a3376170ba64bac173f8db&v=4" alt="Logo" style="height: 50px; width: 50px; margin-right: 10px;"/>
+            <h1 style="font-size: 2.5em; font-weight: 700; margin: 0; letter-spacing: 1px;">ADB Commands Documentation</h1>
+        </div>
+    </div>
+    <!-- Tagline or Subheader -->
+    <p style="font-size: 1.2em; margin-top: 10px; opacity: 0.8;">A guide to performing file operations with ADB (Android Debug Bridge)</p>
+</header>
+
+<center>
+<!-- Main Content Section with Black Background -->
+<main style="max-width: 1100px; margin: 3em auto; padding: 30px; background-color: black; border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+    
+    <!-- Introduction Section -->
+    <section>
+        <h2 style="font-size: 2em; color: #f8f9fa; border-bottom: 2px solid #007bff; padding-bottom: 8px; margin-bottom: 20px;">Introduction</h2>
+        <p style="font-size: 1.2em; line-height: 1.6; color: #f8f9fa;">Using the ADB command shell, you can create, move, rename, replace, pull, push, and perform various other actions on the Android operating system. ADB is a versatile command-line tool that allows you to communicate with Android devices, providing a wide range of functionalities for debugging, testing, and managing devices.</p>
+    </section>
+
+    <!-- Key Features Section -->
+    <section>
+        <h2 style="font-size: 2em; color: #f8f9fa; border-bottom: 2px solid #007bff; padding-bottom: 8px; margin-bottom: 20px;">Key Features of ADB</h2>
+        <ul style="font-size: 1.1em; line-height: 1.6; color: #f8f9fa;">
+            <li><strong>Device Management:</strong> Connect and disconnect devices, identify connected devices, reboot devices into different modes (bootloader, recovery, etc.).</li>
+            <li><strong>File Transfer:</strong> Push and pull files between your computer and the device.</li>
+            <li><strong>Shell Access:</strong> Access the device's shell to execute commands.</li>
+            <li><strong>Logcat:</strong> View system logs to troubleshoot issues.</li>
+            <li><strong>Package Management:</strong> Install, uninstall, and update apps.</li>
+            <li><strong>Debugging Apps:</strong> Start and stop apps, set breakpoints, inspect app state and variables.</li>
+        </ul>
+    </section>
+
+    <!-- Steps Section -->
+    <section>
+        <h2 style="font-size: 2em; color: #f8f9fa; border-bottom: 2px solid #007bff; padding-bottom: 8px; margin-bottom: 20px;">Steps to Use ADB Commands</h2>
+        <ol style="font-size: 1.1em; line-height: 1.6; padding-left: 20px; color: #f8f9fa;">
+            <li><strong style="color: #007bff;">Install Android SDK Platform Tools:</strong> Download from <a href="https://developer.android.com/tools/releases/platform-tools" target="_blank" style="color: #007bff;">here</a>.</li>
+            <li>Unzip the downloaded file and find the ADB application file.</li>
+            <li>Add the ADB path to your environment variable.</li>
+            <li>Enable Developer Mode on your Android device:</li>
+            <ul>
+                <li>Go to Settings → About → Tap "Build number" several times to enable Developer options.</li>
+                <li>Enable USB Debugging in Developer options.</li>
+            </ul>
+            <li>Connect your Android device to your PC via USB cable.</li>
+            <li>Open the command prompt (cmd) and type <code style="background-color: black; border: 1px solid #007bff; padding: 5px 10px; border-radius: 5px;">adb</code> to see the ADB help menu.</li>
+            <li>Verify the connection by typing <code style="background-color: black; border: 1px solid #007bff; padding: 5px 10px; border-radius: 5px;">adb devices</code> to list your connected device.</li>
+        </ol>
+    </section>
+
+    <!-- File Operations Section -->
+    <section>
+        <h2 style="font-size: 2em; color: #f8f9fa; border-bottom: 2px solid #007bff; padding-bottom: 8px; margin-bottom: 20px;">File Operations</h2>
+        
+        <!-- Create and Move Files -->
+        <h3 style="font-size: 1.8em; color: #f8f9fa; margin-bottom: 10px;">Create and Move Files</h3>
+        <ol style="font-size: 1.1em; line-height: 1.6; padding-left: 20px; color: #f8f9fa;">
+            <li>Type <code style="background-color: black; border: 1px solid #007bff; padding: 5px 10px; border-radius: 5px;">adb shell</code> to open the reverse shell on the device.</li>
+            <li>Navigate to <code style="background-color: black; border: 1px solid #007bff; padding: 5px 10px; border-radius: 5px;">sdcard/Documents</code> and create a new folder: <strong>BIATask</strong>.</li>
+            <li>Capture a screenshot using <code style="background-color: black; border: 1px solid #007bff; padding: 5px 10px; border-radius: 5px;">adb shell screencap</code>.</li>
+        </ol>
+
+        <!-- Transfer Files -->
+        <h3 style="font-size: 1.8em; color: #f8f9fa; margin-bottom: 10px;">Transfer Files</h3>
+        <ol style="font-size: 1.1em; line-height: 1.6; padding-left: 20px; color: #f8f9fa;">
+            <li>Use the command <code style="background-color: black; border: 1px solid #007bff; padding: 5px 10px; border-radius: 5px;">adb pull sdcard/Documents/BIATask/capture.png</code> to transfer the screenshot to your PC.</li>
+            <li>Rename the file on the device: <code style="background-color: black; border: 1px solid #007bff; padding: 5px 10px; border-radius: 5px;">adb rename oldname.png newname.png</code>.</li>
+            <li>Push the renamed file back to the device using <code style="background-color: black; border: 1px solid #007bff; padding: 5px 10px; border-radius: 5px;">adb push newname.png sdcard/Documents/BIATask/</code>.</li>
+            <li>Use <code style="background-color: black; border: 1px solid #007bff; padding: 5px 10px; border-radius: 5px;">adb shell mv</code> to move the file to another directory on the device.</li>
+        </ol>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section>
+        <h2 style="font-size: 2em; color: #f8f9fa; border-bottom: 2px solid #007bff; padding-bottom: 8px; margin-bottom: 20px;">Conclusion</h2>
+        <p style="font-size: 1.2em; line-height: 1.6; color: #f8f9fa;">Using ADB commands, developers can perform a variety of operations on Android devices directly from a computer, streamlining testing and debugging workflows. With the ability to manage files, install apps, and access system logs, ADB is an essential tool for Android development.</p>
+    </section>
+</main>
+
+</center>
+
+<!-- Footer Section with Black Background -->
+<footer style="background-color: #343a40; color: white; text-align: center; padding: 1.5em; position: relative; width: 100%; bottom: 0; margin-top: 30px;">
+    <p style="font-size: 1.1em;">&copy; 2024 Sujal Bugalia. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
